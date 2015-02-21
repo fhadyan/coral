@@ -3,20 +3,25 @@ using System.Collections;
 
 public class Oxygen : MonoBehaviour {
 
-	public float oxygenLevel;
+	public float maxOxygen;
+	public GameObject oxygenBar;
 
 	private bool dive = false;
+	private RectTransform rt;
+	private float maxBar;
+	private float oxygenLevel;
 
 	// Use this for initialization
 	void Start () {
+		rt = oxygenBar.GetComponent<RectTransform> ();
+		maxBar = rt.sizeDelta.y;
+		oxygenLevel = maxOxygen;
 		InvokeRepeating ("decreaseOxy", 0, 1.0f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (dive) {
-				
-		}
+		//if (dive) {	}
 	}
 
 	void decreaseOxy(){
@@ -26,6 +31,7 @@ public class Oxygen : MonoBehaviour {
 
 		if (dive) {
 			oxygenLevel -= 1f;	
+			rt.sizeDelta -= new Vector2(0f, 1/maxOxygen * maxBar);
 		}
 	}
 
