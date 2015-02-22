@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\script\Oxygen.cs" />
-     <Compile Include="Assets\script\decreaseOxygen.cs" />
      <Compile Include="Assets\script\drag.cs" />
      <Compile Include="Assets\script\follow.cs" />
      <Compile Include="Assets\script\move.cs" />

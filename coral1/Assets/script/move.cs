@@ -13,19 +13,35 @@ public class move : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKey(KeyCode.DownArrow)){
-			transform.Translate(Vector2.up * Time.deltaTime * speed*-1);
+			moveDown();
 		}
 
 		if(Input.GetKey(KeyCode.UpArrow)){
-			transform.Translate(Vector2.up * Time.deltaTime * speed);
+			moveUp();
 		}
 
 		if(Input.GetKey(KeyCode.LeftArrow)){
-			transform.Translate(Vector2.right * Time.deltaTime * speed*-1);
+			moveLeft();
 		}
 		
 		if(Input.GetKey(KeyCode.RightArrow)){
-			transform.Translate(Vector2.right * Time.deltaTime * speed);
+			moveRigth();
 		}
+	}
+
+	public void moveDown(){
+		transform.Translate(Vector2.up * Time.deltaTime * speed*-1);
+	}
+
+	public void moveUp(){
+		transform.Translate(Vector2.up * Time.deltaTime * speed);
+	}
+
+	public void moveRigth(){
+		transform.Translate(Vector2.right * Time.deltaTime * speed);
+	}
+
+	public void moveLeft(){
+		transform.Translate(Vector2.right * Time.deltaTime * speed*-1);
 	}
 }
