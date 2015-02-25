@@ -46,12 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\script\ActuateMove.cs" />
+     <Compile Include="Assets\script\Move.cs" />
      <Compile Include="Assets\script\Oxygen.cs" />
      <Compile Include="Assets\script\drag.cs" />
      <Compile Include="Assets\script\follow.cs" />
-     <Compile Include="Assets\script\move.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="TouchScript">
+ <HintPath>D:/data/unity/coral/coral1/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
