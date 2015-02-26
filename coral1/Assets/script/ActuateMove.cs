@@ -6,13 +6,13 @@ public class ActuateMove : MonoBehaviour {
 	public GameObject player;
 	public int direction; //1 = up, 2 = right, 3 = down, 4= left
 
-	private Move mv;
+	private Moving mv;
 	private bool actuate;
 
 
 	// Use this for initialization
 	void Start () {
-		mv = player.GetComponent<Move> ();	
+		mv = player.GetComponent<Moving> ();	
 
 	}
 	
